@@ -1,8 +1,8 @@
-## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+### INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
+### DATE : 16/2/24
+### NAME : Vishnupathi					             
+### ROLLNUMBER : 212221223004
+### DEPARTMENT: Information Technology 
 
 
 ## AIM:
@@ -31,14 +31,14 @@ Flash Memory	16 KB (ATmega168) or 32 KB (ATmega328) of which 2 KB used by boot l
 SRAM	1 KB (ATmega168) or 2 KB (ATmega328)
 EEPROM	512 bytes (ATmega168) or 1 KB (ATmega328)
 Clock Speed	16 MHz
-## PIN DIAGRAM FOR ATMEGA 328
- 
-![image](https://user-images.githubusercontent.com/36288975/163530394-115baee4-7ed1-49fe-9cce-d7b625e11e85.png)
-
+## PIN DIAGRAM FOR ATMEGA 328:
 FIGURE-01
+
+ ![image](https://user-images.githubusercontent.com/36288975/163530394-115baee4-7ed1-49fe-9cce-d7b625e11e85.png)
+FIGURE-02
+
 ![image](https://user-images.githubusercontent.com/36288975/163530431-4d390e98-0942-42d8-95b8-f57d348e6ad8.png)
 
-FIGURE-02
 ## PROCEDURE 
  Open tinker cad account 
 1.	Select Arduino uno , bread board , digital input and digital output 
@@ -51,35 +51,47 @@ FIGURE-02
 
 ## CIRCUIT DIAGRAM 
 
+FIGURE -03:
 
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
 
-
-
-FIGURE -03
-
+<img width="459" alt="image" src="https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/145830753/4f89337d-f6f5-44cc-b0b5-48dcf2a5d0b6">
 
 
 
-## PROGRAM 
- 
- 
+## PROGRAM:
+```
+int led=3;
+int pushbutton=4;
 
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(pushbutton,INPUT);
+}
 
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+  {
+    digitalWrite(led,HIGH);
+    delay(500);
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+}
+```
+ ## OUTPUT OF SIMULATION :
+#### OFF Condition:
+<img width="436" alt="image" src="https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/145830753/5d8095d1-b2fc-447c-b1f1-d6ce5f54b969">
 
-
-
-
-
-
-
- 
- 
- 
-
-
-
-## OUTPUT OF SIMULATION :
-
-[My image](username.github.com/repository/img/image.jpg)
+#### On Condition:
+<img width="423" alt="image" src="https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/145830753/2871f844-eb7f-4b8d-a8ba-bacc069e71db">
 
